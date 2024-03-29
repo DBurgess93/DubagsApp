@@ -1,8 +1,10 @@
-<div class="row">
+<div class="page-title">
+  <h1>Dubags App</h1>
+</div>
+<div class="prompt-input">
   <%= form_with url: openai_path, method: :get do |form| %>
     <div class="form-group">
-      <%= form.label :query %> <%= form.text_area :query %> <%= form.submit 'get
-    content' %>
+      <%= form.text_area :query %> <%= form.submit 'Get content' %>
     </div>
   <% end %>
 </div>
@@ -10,7 +12,12 @@
   <% if @response %>
     <h2>Response:</h2>
     <p><%= @response %></p>
-  <% elsif @error %>
+  <% end %>
+  <% if @image_url %>
+    <h2>Generated Image:</h2>
+    <img src="<%= @image_url %>" alt="Generated Image">
+  <% end %>
+  <% if @error %>
     <h2>Error:</h2>
     <p><%= @error %></p>
   <% end %>

@@ -13,3 +13,46 @@
  *= require_tree .
  *= require_self
  */
+
+.page-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.prompt-input {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f3f3f3;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  display: flex; /* Use flexbox to align children side by side */
+  align-items: center; /* Align items vertically in the center */
+  gap: 10px; /* Add space between textarea and button */
+}
+
+.form-group textarea {
+  width: 100%; /* Take full width but will be adjusted due to flex */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  resize: vertical;
+  margin: 0; /* Remove margin to align properly with button */
+}
+
+.form-group input[type="submit"] {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.form-group input[type="submit"]:hover {
+  background-color: #0056b3;
+}
