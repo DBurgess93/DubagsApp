@@ -29,7 +29,6 @@ class OpenaiService
     truncated_prompt = prompt.length > 1000 ? prompt[0..999] : prompt
 
     body = {
-      # model: "image-davinci-003",
       prompt: truncated_prompt,
       n: 1,
       size: "1024x1024"

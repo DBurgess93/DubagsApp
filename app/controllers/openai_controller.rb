@@ -5,7 +5,7 @@ class OpenaiController < ApplicationController
 
       text_response = service.call_text(params[:query])
       @response = text_response
-      @image_url = service.generate_image(text_response) if text_response.present?  # Generate the image based on the text response
+      @image_url = service.generate_image(text_response) if text_response.present?
     end
   rescue => e
     @error = e.message

@@ -30,18 +30,18 @@
 }
 
 .form-group {
-  display: flex; /* Use flexbox to align children side by side */
-  align-items: center; /* Align items vertically in the center */
-  gap: 10px; /* Add space between textarea and button */
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .form-group textarea {
-  width: 100%; /* Take full width but will be adjusted due to flex */
+  width: 100%;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
   resize: vertical;
-  margin: 0; /* Remove margin to align properly with button */
+  margin: 0;
 }
 
 .form-group input[type="submit"] {
