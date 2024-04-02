@@ -4,7 +4,9 @@
 <div class="prompt-input">
   <%= form_with url: openai_path, method: :get do |form| %>
     <div class="form-group">
-      <%= form.text_area :query %> <%= form.submit 'Get content' %>
+      <%= form.label :query, "Choose a genre" %>
+      <%= form.select :query, @prompts.map { |p| [p[:title], p[:text]] } %>
+      <%= form.submit 'Get content' %>
     </div>
   <% end %>
 </div>
