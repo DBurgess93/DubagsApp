@@ -24,17 +24,17 @@ class OpenaiService
     response['choices'][0]['message']['content']
   end
 
-  def generate_image(prompt)
-    raise ArgumentError, 'Prompt cannot be blank' if prompt.blank?
-    truncated_prompt = prompt.length > 1000 ? prompt[0..999] : prompt
+  # def generate_image(prompt)
+  #   raise ArgumentError, 'Prompt cannot be blank' if prompt.blank?
+  #   truncated_prompt = prompt.length > 1000 ? prompt[0..999] : prompt
 
-    body = {
-      prompt: truncated_prompt,
-      n: 1,
-      size: "1024x1024"
-    }
-    response = self.class.post("#{@api_url}/images/generations", body: body.to_json, headers: @options[:headers], timeout: 500)
-    raise response['error']['message'] unless response.code == 200
-    response['data'][0]['url']
-  end
+  #   body = {
+  #     prompt: truncated_prompt,
+  #     n: 1,
+  #     size: "1024x1024"
+  #   }
+  #   response = self.class.post("#{@api_url}/images/generations", body: body.to_json, headers: @options[:headers], timeout: 500)
+  #   raise response['error']['message'] unless response.code == 200
+  #   response['data'][0]['url']
+  # end
 end

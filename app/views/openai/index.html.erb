@@ -10,12 +10,10 @@
 </div>
 <div class="row">
   <% if @response %>
-    <h2>Response:</h2>
-    <p><%= @response %></p>
-  <% end %>
-  <% if @image_url %>
-    <h2>Generated Image:</h2>
-    <img src="<%= @image_url %>" alt="Generated Image">
+    <h2>Script:</h2>
+    <% @response.split("\n").each do |paragraph| %>
+      <p><%= paragraph %></p>
+    <% end %>
   <% end %>
   <% if @error %>
     <h2>Error:</h2>
