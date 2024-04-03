@@ -99,3 +99,32 @@ body {
   margin: 0 auto;
   color: #f4f4f4;
 }
+
+.selections {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.chip {
+  padding: 8px 1rem;
+  margin: 4px;
+  margin-top: 10px;
+  font-family: "Plus_Jakarta_Sans", "Roboto", -apple-system, "Segoe UI",
+    sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 1px;
+  border-radius: 50px;
+  border-style: none;
+  text-transform: inherit;
+  box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.1);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  vertical-align: middle;
+  align-items: center;
+  justify-content: center;
+  touch-action: manipulation;
+  background-color: #282828;
+  color: #ffffff;
+}

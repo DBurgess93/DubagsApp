@@ -2,7 +2,7 @@
   <h1>Duby Scripts</h1>
 </div>
 <div class="prompt-input">
-  <%= form_with url: openai_create_path, method: :post do |form| %>
+  <%= form_with url: openai_create_path, method: :post, data: {turbo: false} do |form| %>
     <div class="form-group">
       <%= form.label :genre, "Genre" %>
       <%= form.select :genre, @genres %>
@@ -12,6 +12,19 @@
       <%= form.text_field :characters %>
       <%= form.submit 'Generate Script' %>
     </div>
+  <% end %>
+</div>
+<div class="selections">
+  <% if @genre %>
+    <div class="chip"> <%= @genre %> </div>
+  <% end %>
+  <% if @location %>
+    <div class="chip"><%= @location %></div>
+  <% end %>
+  <% if @characters %>
+    <% @characters.each do |c| %>
+      <div class="chip"> <%= c %> </div>
+    <% end %>
   <% end %>
 </div>
 <div class="row">
