@@ -22,12 +22,25 @@ body {
   color: #322214;
 }
 
+.home-link {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 42px;
+}
+#progress-bar {
+  transition: width 10s linear;
+  height: 5px;
+  background-color: #ffc107;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0%;
+  z-index: 9999;
+}
 .page-title {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #ffffff;
-  font-size: 24px;
 }
 
 .prompt-input {

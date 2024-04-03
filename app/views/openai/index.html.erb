@@ -1,5 +1,6 @@
+<div id="progress-bar"></div>
 <div class="page-title">
-  <h1>Duby Scripts</h1>
+  <h1> <%= link_to 'Duby Scripts', root_path, class: 'home-link' %> </h1>
 </div>
 <div class="prompt-input">
   <%= form_with url: openai_create_path, method: :post, data: {turbo: false} do |form| %>
