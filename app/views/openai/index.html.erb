@@ -2,7 +2,7 @@
   <h1>Duby Scripts</h1>
 </div>
 <div class="prompt-input">
-  <%= form_with url: openai_path, method: :post do |form| %>
+  <%= form_with url: openai_create_path, method: :post do |form| %>
     <div class="form-group">
       <%= form.label :genre, "Genre" %>
       <%= form.select :genre, @genres %>

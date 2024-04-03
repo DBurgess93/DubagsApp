@@ -4,5 +4,5 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   root "openai#index"
   get 'openai', to: 'openai#index', as: 'openai'
-  post 'openai' => 'openai#create', as: :openai_create
+  post 'openai', to: 'openai#create', as: 'openai_create'
 end
