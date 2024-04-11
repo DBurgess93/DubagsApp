@@ -99,18 +99,6 @@ body {
   cursor: pointer;
   margin-top: 12px;
 }
-@media (max-width: 600px) {
-  .form-group input {
-    width: 100%;
-  }
-  .form-group select {
-    width: 100%;
-  }
-  .prompt-input {
-    padding-left: 12px;
-    padding-right: 12px;
-  }
-}
 
 .form-group input[type="submit"]:hover {
   background-color: #0056b3;
@@ -120,7 +108,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  width: 34%;
+  width: 40%;
   margin: 0 auto;
   color: #f4f4f4;
 }
@@ -153,4 +141,23 @@ body {
   touch-action: manipulation;
   background-color: #282828;
   color: #ffffff;
+}
+
+@media (max-width: 600px) {
+  .form-group input {
+    width: 100%;
+  }
+  .form-group select {
+    width: 100%;
+  }
+  .prompt-input {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+  .row {
+    width: 80%;
+  }
+  #progress-bar {
+    height: 10px;
+  }
 }
