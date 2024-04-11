@@ -99,6 +99,18 @@ body {
   cursor: pointer;
   margin-top: 12px;
 }
+@media (max-width: 600px) {
+  .form-group input {
+    width: 100%;
+  }
+  .form-group select {
+    width: 100%;
+  }
+  .prompt-input {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+}
 
 .form-group input[type="submit"]:hover {
   background-color: #0056b3;
@@ -117,6 +129,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
   gap: 10px;
 }
 
