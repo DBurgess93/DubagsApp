@@ -11,6 +11,8 @@
       <%= form.select :location, @locations %>
       <%= form.label :characters, "Characters" %>
       <%= form.text_field :characters %>
+      <%= form.label :villain, "Villain" %>
+      <%= form.text_field :villain %>
       <%= form.submit 'Generate Script' %>
     </div>
   <% end %>
