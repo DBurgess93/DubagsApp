@@ -71,7 +71,6 @@ class OpenaiController < ApplicationController
     ]
 
     @tones = [
-      "Orc",
       "Dorky",
       "Posh",
       "Gangster",
@@ -82,8 +81,6 @@ class OpenaiController < ApplicationController
       "Cowboy",
       "Pirate",
       "Robot",
-      "Alien",
-      "Hobbit"
     ]
   end
 end
