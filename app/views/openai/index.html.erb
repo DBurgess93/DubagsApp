@@ -9,10 +9,12 @@
       <%= form.select :genre, @genres %>
       <%= form.label :location, "Location" %>
       <%= form.select :location, @locations %>
+      <%= form.label :timeline, "Timeline" %>
+      <%= form.select :timeline, @timelines %>
+      <%= form.label :tone, "Tone" %>
+      <%= form.select :tone, @tones %>
       <%= form.label :characters, "Characters" %>
       <%= form.text_field :characters %>
-      <%= form.label :villain, "Villain" %>
-      <%= form.text_field :villain %>
       <%= form.submit 'Generate Script' %>
     </div>
   <% end %>
@@ -23,6 +25,9 @@
   <% end %>
   <% if @location %>
     <div class="chip"><%= @location %></div>
+  <% end %>
+  <% if @timeline %>
+    <div class="chip"><%= @timeline %></div>
   <% end %>
   <% if @characters %>
     <% @characters.each do |c| %>
