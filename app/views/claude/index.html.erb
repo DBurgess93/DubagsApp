@@ -3,7 +3,7 @@
   <h1> <%= link_to 'Duby Scripts', root_path, class: 'home-link' %> </h1>
 </div>
 <div class="prompt-input">
-  <%= form_with url: openai_create_path, method: :post, data: {turbo: false} do |form| %>
+  <%= form_with url: claude_create_path, method: :post, data: {turbo: false} do |form| %>
     <div class="form-group">
       <%= form.label :genre, "Genre" %>
       <%= form.select :genre, @genres %>
