@@ -13,8 +13,8 @@
       <%= form.select :timeline, @timelines %>
       <%= form.label :tone, "Tone" %>
       <%= form.select :tone, @tones %>
-      <%= form.label :characters, "Characters" %>
-      <%= form.text_field :characters %>
+      <%= form.label :characters, "Characters (separate with commas)" %>
+      <%= form.text_field :characters, placeholder: "e.g. Mary Jane, Dan" %>
       <%= form.submit 'Generate Script' %>
     </div>
   <% end %>

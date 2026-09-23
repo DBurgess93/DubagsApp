@@ -1,22 +1,20 @@
 class ClaudeController < ApplicationController
   before_action :set_select_options, only: [:index, :create]
   def index
-    if params[:query]
-      service = ClaudeService.new
-
-      text_response = service.call_text(params[:query])
-      @response = text_response
-    end
-  rescue => e
-    @error = e.message
   end
 
   def create
     @genre = params[:genre]
     @location = params[:location]
-    @characters = params[:characters].split(' ').map(&:strip).map { |name| name.titleize }
+    @characters = params[:characters].to_s.split(',').map(&:strip).reject(&:blank?).map(&:titleize)
     @timeline = params[:timeline]
     @tone = params[:tone]
+
+    if @characters.empty?
+      @error = 'Please add at least one character.'
+      return render :index
+    end
+
     query_template = "Write a script for a movie scene that goes for no more than 300 words. Briefly describe the scene at the very start but do not include any narration throughout the script, the main body of the script should only include the characters lines. The scene should follow these guidelines:
     Genre: %{genre}
     Characters: %{characters}
@@ -29,7 +27,12 @@ class ClaudeController < ApplicationController
     @response = ClaudeService.new.call_text(query)
 
     render :index
+  rescue ClaudeService::Error => e
+    @error = e.message
+    render :index
   end
+
+  private
 
   def set_select_options
     @genres = [

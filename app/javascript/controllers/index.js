@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const form = document.querySelector("form");
   if (form) {
     form.addEventListener("submit", (event) => {
-      const duration = 35000;
+      const duration = 25000;
       startProgressBar(duration);
       setTimeout(completeProgressBar, duration);
     });
